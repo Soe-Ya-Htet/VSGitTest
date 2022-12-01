@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CSVUploadComponent } from './csvupload/csvupload.component';
+import { RestAPICallService } from './rest-apicall.service';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -12,9 +14,10 @@ import { CSVUploadComponent } from './csvupload/csvupload.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [RestAPICallService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
